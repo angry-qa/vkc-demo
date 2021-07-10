@@ -36,11 +36,12 @@ public class TestBase {
         Configuration.startMaximized = ownerConfig.isMaximized();
 
         if(ownerConfig.isRemote()) {
-            Configuration.remote = String.format("https://%s:%s@%s/wd/hub/",
+            //Configuration.remote = String.format("https://%s:%s@%s/wd/hub/",
+            Configuration.remote = String.format("https://%s:%s@%s:4444/wd/hub/",
                     credentialConfig.remoteWebUser(),
                     credentialConfig.remoteWebPassword(),
                     credentialConfig.getSelenoidURL());
-        }
+    }
 
         open(LOGIN_PAGE_URL);
         vkLoginPage.loginVK(credentialConfig.vkUserLogin(), credentialConfig.vkUserPassword());
