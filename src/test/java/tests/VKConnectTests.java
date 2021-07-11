@@ -1,9 +1,7 @@
 package tests;
 
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
+import com.codeborne.selenide.Selenide;
+import io.qameta.allure.*;
 import models.TestUsers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -24,6 +22,12 @@ public class VKConnectTests extends TestBase {
     @BeforeEach
     public void openVKConnect() {
         step("Открыть главную страницу VKConnect", () -> open(CONNECT_URL));
+    }
+    public void setVKCCookie() {
+        step("Выставить куку русского языка", () -> {
+                Selenide.executeJavaScript("document.cookie = 'remixlang=0'; domain='" + CONNECT_URL + "'");
+                Selenide.refresh();
+        });
     }
 
     @Test()
