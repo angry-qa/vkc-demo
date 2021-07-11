@@ -19,7 +19,7 @@ import testdata.ServiceData;
 import java.util.stream.Stream;
 
 @DisplayName("I&T тесты VKConnect")
-@Layer("web")
+@Layer("ui")
 @Tags({@Tag("web"), @Tag("integrations")})
 @Owner("dtrofimov")
 public class VKConnectIntegrationTests extends TestBase {

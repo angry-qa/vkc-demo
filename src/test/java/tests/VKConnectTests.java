@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("UI тесты VKConnect")
-@Layer("web")
+@Layer("ui")
 @Tags({@Tag("web"), @Tag("smoke"), @Tag("regress")})
 @Owner("dtrofimov")
 public class VKConnectTests extends TestBase {

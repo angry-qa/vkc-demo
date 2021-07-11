@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Auth тесты")
-@Layer("web")
+@Layer("ui")
 @Tag("web")
 @Owner("dtrofimov")
 public class VKLoginTests extends TestBase {
@@ -59,6 +59,7 @@ public class VKLoginTests extends TestBase {
 
     @Test
     @Manual
+    @Issue("YYY-1")
     @DisplayName("Разлогин")
     @Feature("Авторизация ВКонтакте")
     @Severity(SeverityLevel.CRITICAL)
