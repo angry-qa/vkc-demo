@@ -3,7 +3,6 @@ package tests;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
 import models.Service;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -34,7 +33,6 @@ public class VKConnectIntegrationTests extends TestBase {
     @MethodSource("serviceProvider")
     @Feature("Интеграции VKConnect")
     @Severity(SeverityLevel.NORMAL)
-    @Story("Личные данные")
     public void checkConnect(Service service) {
             integrationPage
                     .openIntegrationServicePage(service.getUrl())
