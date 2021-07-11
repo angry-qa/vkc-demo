@@ -6,7 +6,8 @@ import static org.aeonbits.owner.Config.LoadType.MERGE;
 @Config.LoadPolicy(MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:${driver}.properties"})
+        "classpath:${driver}.properties",
+        "classpath:remote.properties"})
 public interface OwnerConfig extends Config {
 
     @DefaultValue("chrome")
@@ -24,16 +25,7 @@ public interface OwnerConfig extends Config {
     @Key("webdriver.remote")
     boolean isRemote();
 
-    @Key("host.login")
-    String getAuthorizationHost();
-
-    @Key("host.vkconnect")
-    String getVKCHost();
-
-    @Key("host.vk")
-    String getVKHost();
-
-    @Key("host.api")
-    String getAPIHost();
+    @Key("base.host")
+    String getHost();
 
 }

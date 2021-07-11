@@ -6,18 +6,8 @@ import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static io.qameta.allure.Allure.step;
 
 public class VKLoginPage extends TestBase {
-
-    @Step("Залогиниться через десктопную версию сайта")
-    public void loginVKDesktop(String login, String pass) {
-        step("Login", () -> {
-            $x("//*[@id='index_email']").shouldBe(Condition.visible).setValue(login);
-            $x("//*[@id='index_pass']").shouldBe(Condition.visible).setValue(pass);
-            $x("//*[@id='index_login_button']").shouldBe(Condition.visible).click();
-        });
-    }
 
     @Step("Залогиниться")
     public void loginVK(String login, String pass) {
