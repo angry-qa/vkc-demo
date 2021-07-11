@@ -7,7 +7,7 @@ import static org.aeonbits.owner.Config.LoadType.MERGE;
 @Config.Sources({
         "system:properties",
         "classpath:${driver}.properties",
-        "classpath:remote.properties"})
+        "classpath:local.properties"})
 public interface OwnerConfig extends Config {
 
     @DefaultValue("chrome")
@@ -21,7 +21,7 @@ public interface OwnerConfig extends Config {
     @Key("web.maximized")
     boolean isMaximized();
 
-    @DefaultValue("true")
+    @DefaultValue("false")
     @Key("webdriver.remote")
     boolean isRemote();
 
