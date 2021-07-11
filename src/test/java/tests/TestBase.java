@@ -48,7 +48,6 @@ public class TestBase {
     }
 
         open(LOGIN_PAGE_URL);
-        vkLoginPage.setCookieForLogin(ownerConfig.getVKHost());
         vkLoginPage.loginVK(credentialConfig.vkUserLogin(), credentialConfig.vkUserPassword());
     }
 

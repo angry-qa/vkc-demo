@@ -1,7 +1,9 @@
 package tests;
 
-import com.codeborne.selenide.Selenide;
-import io.qameta.allure.*;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import models.TestUsers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -20,19 +22,7 @@ public class VKConnectTests extends TestBase {
     private final TestUsers user =  new VKCTestUsers().user2;
 
     @BeforeEach
-    public void openVKConnect() {
-        step("Открыть главную страницу VKConnect", () -> open(CONNECT_URL));
-        step("Выставить куку русского языка", () -> {
-                Selenide.executeJavaScript("document.cookie = 'remixlang=0'; domain='" + CONNECT_URL + "'");
-                Selenide.refresh();
-        });
-    }
-    public void setVKCCookie() {
-        step("Выставить куку русского языка", () -> {
-                Selenide.executeJavaScript("document.cookie = 'remixlang=0'; domain='" + CONNECT_URL + "'");
-                Selenide.refresh();
-        });
-    }
+    public void openVKConnect() { step("Открыть главную страницу VKConnect", () -> open(CONNECT_URL));}
 
     @Test()
     @DisplayName("Проверка заголовка, ссылки, аватарки на главной")

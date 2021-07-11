@@ -1,7 +1,6 @@
 package pageobjects;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 import tests.TestBase;
 
@@ -31,12 +30,6 @@ public class VKLoginPage extends TestBase {
     @Step("В шапке имя пользователя: {name}")
     public void checkUserLogin(String name) {
             $(".TopNavBtn__profileName").shouldBe(Condition.visible).shouldHave(text(name));
-    }
-
-    @Step("Выставить куку русского языка")
-    public void setCookieForLogin(String host) {
-        Selenide.executeJavaScript("document.cookie = 'remixlang=0'; domain='" + host + "'");
-        Selenide.refresh();
     }
 
 }
