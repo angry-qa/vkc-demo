@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Layer("ui")
 @Tags({@Tag("web"), @Tag("smoke"), @Tag("regress")})
 @Owner("dtrofimov")
-public class VKConnectTests extends TestBase {
+public class VKConnectUITests extends TestBase {
 
     static ConnectPage connectPage = new ConnectPage();
     private final TestUsers user =  new VKCTestUsers().user2;
@@ -23,7 +23,7 @@ public class VKConnectTests extends TestBase {
     @BeforeEach
     public void openVKConnect() { step("Открыть главную страницу VKConnect", () -> open(CONNECT_URL));}
 
-    @Test()
+    @Test
     @DisplayName("Проверка заголовка, ссылки, аватарки на главной")
     @Feature("Личный кабинет VKConnect")
     @Severity(SeverityLevel.CRITICAL)
@@ -39,7 +39,7 @@ public class VKConnectTests extends TestBase {
                 .checkHeaderAva();
     }
 
-    @Test()
+    @Test
     @DisplayName("Навигация по меню")
     @Feature("Личный кабинет VKConnect")
     @Severity(SeverityLevel.CRITICAL)
@@ -66,7 +66,7 @@ public class VKConnectTests extends TestBase {
         connectPage.checkTermsLink();
     }
 
-    @Test()
+    @Test
     @DisplayName("Смена пола")
     @Feature("Личный кабинет VKConnect")
     @Severity(SeverityLevel.NORMAL)

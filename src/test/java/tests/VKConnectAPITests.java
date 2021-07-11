@@ -3,7 +3,7 @@ package tests;
 import annotations.Layer;
 import apisteps.APISteps;
 import config.OwnerConfig;
-import io.qameta.allure.Owner;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import models.Root;
 import models.TestUsers;
@@ -31,6 +31,8 @@ public class VKConnectAPITests {
 
     @Test
     @DisplayName("Проверка валидации телефона")
+    @Feature("Методы VKConnect")
+    @Severity(SeverityLevel.CRITICAL)
     void validatePhone() {
         Root response = apiSteps.validatePhone(user1.getPhone());
         assertEquals(response.getResponse().getSid().contains("login_"), true,
@@ -39,6 +41,8 @@ public class VKConnectAPITests {
 
     @Test
     @DisplayName("Проверка валидации логина с телефоном")
+    @Feature("Методы VKConnect")
+    @Severity(SeverityLevel.CRITICAL)
     void validateLoginWithPhone() {
         Root response = apiSteps.validateLogin(user1.getLogin());
         assertEquals(response.getResponse().getSid().contains("loginvalidate_"), true,
@@ -49,6 +53,8 @@ public class VKConnectAPITests {
 
     @Test
     @DisplayName("Проверка валидации логина с почтой")
+    @Feature("Методы VKConnect")
+    @Severity(SeverityLevel.CRITICAL)
     void validateLoginWithEmail() {
         Root response = apiSteps.validateLogin(user2.getLogin());
         assertEquals(response.getResponse().getSid().isEmpty(), false);
