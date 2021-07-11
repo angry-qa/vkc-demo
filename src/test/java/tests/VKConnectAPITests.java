@@ -2,19 +2,20 @@ package tests;
 
 import apisteps.APISteps;
 import config.OwnerConfig;
+import io.qameta.allure.Owner;
 import io.restassured.RestAssured;
 import models.Root;
 import models.TestUsers;
 import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import testdata.VKCTestUsers;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("API тесты VKConnect")
+@Owner("dtrofimov")
+@Tags({@Tag("api"), @Tag("smoke"), @Tag("regress")})
 public class VKConnectAPITests {
 
     APISteps apiSteps = new APISteps();

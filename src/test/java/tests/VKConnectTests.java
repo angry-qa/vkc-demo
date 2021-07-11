@@ -1,13 +1,8 @@
 package tests;
 
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import models.TestUsers;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pageobjects.ConnectPage;
 import testdata.VKCTestUsers;
 
@@ -16,6 +11,8 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("UI тесты VKConnect")
+@Owner("dtrofimov")
+@Tags({@Tag("web"), @Tag("smoke"), @Tag("regress")})
 public class VKConnectTests extends TestBase {
 
     static ConnectPage connectPage = new ConnectPage();

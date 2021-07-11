@@ -1,13 +1,8 @@
 package tests;
 
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import models.TestUsers;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pageobjects.VKPage;
 import testdata.VKCTestUsers;
 
@@ -15,6 +10,8 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Auth тесты")
+@Owner("dtrofimov")
+@Tag("web")
 public class VKLoginTests extends TestBase {
 
     static VKPage vkPage = new VKPage();
