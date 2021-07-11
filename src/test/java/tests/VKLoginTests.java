@@ -27,7 +27,7 @@ public class VKLoginTests extends TestBase {
 
     @Test
     @DisplayName("Проверка, что пользователь залогинен")
-    @Feature("ВКонтакте")
+    @Feature("Авторизация ВКонтакте")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Авторизация")
     void checkUserLogin() {
@@ -35,10 +35,10 @@ public class VKLoginTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка навигации для залогиненого пользователя")
-    @Feature("ВКонтакте")
+    @DisplayName("Проверка навигации по разделам залогиненого пользователя")
+    @Feature("Авторизация ВКонтакте")
     @Severity(SeverityLevel.CRITICAL)
-    @Story("Базовый функционал")
+    @Story("Базовый функционал авторизированного")
     void menuNavigationTest() {
         vkPage
                 .rightMenuNavigateTo("Моя страница", user.getUsername())
@@ -48,7 +48,7 @@ public class VKLoginTests extends TestBase {
 
     @Test
     @DisplayName("Проверка ФИО залогиненого пользователя")
-    @Feature("ВКонтакте")
+    @Feature("Авторизация ВКонтакте")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Авторизация")
     void checkUserName() {

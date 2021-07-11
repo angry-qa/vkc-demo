@@ -24,7 +24,7 @@ public class VKConnectAPITests {
     private final TestUsers user2 =  new VKCTestUsers().user2;
 
     @BeforeAll
-    static void setup() { RestAssured.baseURI = ownerConfig.getAPIHost(); }
+    static void setup() { RestAssured.baseURI = "https://" + ownerConfig.getAPIHost(); }
 
     @Test
     @DisplayName("Проверка валидации телефона")

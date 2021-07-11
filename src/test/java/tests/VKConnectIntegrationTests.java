@@ -32,7 +32,7 @@ public class VKConnectIntegrationTests extends TestBase {
 
     @ParameterizedTest(name = "Проверка VKConnect на внешнем сервисе")
     @MethodSource("serviceProvider")
-    @Feature("Личный кабинет")
+    @Feature("Интеграции VKConnect")
     @Severity(SeverityLevel.NORMAL)
     @Story("Личные данные")
     public void checkConnect(Service service) {

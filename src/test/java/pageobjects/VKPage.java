@@ -14,7 +14,7 @@ public class VKPage {
 
     @Step("Перейти в раздел {item}")
     public VKPage rightMenuNavigateTo(String item, String pageTtitle) {
-        step("В правом меню выбрать раздел {item}", () -> {
+        step("В правом меню выбрать раздел " + item, () -> {
             $x("//*[@id='side_bar_inner']//span[contains(text(), '" + item + "')]")
                     .shouldBe(Condition.visible).click();
             sleep(2000);

@@ -28,7 +28,7 @@ public class VKConnectTests extends TestBase {
 
     @Test()
     @DisplayName("Проверка заголовка, ссылки, аватарки на главной")
-    @Feature("Личный кабинет")
+    @Feature("Личный кабинет VKConnect")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Навигация")
     public void checkHeadersAndAvatars() {
@@ -44,7 +44,7 @@ public class VKConnectTests extends TestBase {
 
     @Test()
     @DisplayName("Навигация по меню")
-    @Feature("Личный кабинет")
+    @Feature("Личный кабинет VKConnect")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Навигация")
     public void checkMenuNavigation() {
@@ -61,7 +61,7 @@ public class VKConnectTests extends TestBase {
 
     @Test
     @DisplayName("Проверка ссылок конфиденциальность и условия")
-    @Feature("Личный кабинет")
+    @Feature("Личный кабинет VKConnect")
     @Severity(SeverityLevel.MINOR)
     @Story("Навигация")
     public void checkPrivacyAndTermsLinks() {
@@ -71,7 +71,7 @@ public class VKConnectTests extends TestBase {
 
     @Test()
     @DisplayName("Смена пола")
-    @Feature("Личный кабинет")
+    @Feature("Личный кабинет VKConnect")
     @Severity(SeverityLevel.NORMAL)
     @Story("Личные данные")
     public void checkSexChange() {

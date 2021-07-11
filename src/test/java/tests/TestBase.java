@@ -22,9 +22,9 @@ public class TestBase {
     static CredentialConfig credentialConfig = ConfigFactory.create(CredentialConfig.class);
     static VKLoginPage vkLoginPage = new VKLoginPage();
 
-    static String LOGIN_PAGE_URL = ownerConfig.getAuthorizationHost();
-    static String CONNECT_URL = ownerConfig.getVKCHost();
-    static String VK_URL = ownerConfig.getVKHost();
+    static String LOGIN_PAGE_URL = "https://" + ownerConfig.getAuthorizationHost();
+    static String CONNECT_URL = "https://" + ownerConfig.getVKCHost();
+    static String VK_URL = "https://" + ownerConfig.getVKHost();
 
     @BeforeAll
     static void setup() {
@@ -48,6 +48,7 @@ public class TestBase {
     }
 
         open(LOGIN_PAGE_URL);
+        vkLoginPage.setCookieForLogin(ownerConfig.getVKHost());
         vkLoginPage.loginVK(credentialConfig.vkUserLogin(), credentialConfig.vkUserPassword());
     }
 
