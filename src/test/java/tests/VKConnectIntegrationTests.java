@@ -29,8 +29,6 @@ public class VKConnectIntegrationTests extends TestBase {
     @BeforeEach
     public void openVKConnect() {
         step("Открыть главную страницу VKConnect", () -> open(CONNECT_URL));
-    }
-    public void setVKCCookie() {
         step("Выставить куку русского языка", () -> {
             Selenide.executeJavaScript("document.cookie = 'remixlang=0'; domain='" + CONNECT_URL + "'");
             Selenide.refresh();
