@@ -1,5 +1,6 @@
 package tests;
 
+import annotations.Layer;
 import io.qameta.allure.*;
 import models.TestUsers;
 import org.junit.jupiter.api.*;
@@ -11,8 +12,9 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("UI тесты VKConnect")
-@Owner("dtrofimov")
+@Layer("web")
 @Tags({@Tag("web"), @Tag("smoke"), @Tag("regress")})
+@Owner("dtrofimov")
 public class VKConnectTests extends TestBase {
 
     static ConnectPage connectPage = new ConnectPage();

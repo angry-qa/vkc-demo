@@ -1,5 +1,7 @@
 package tests;
 
+import annotations.Layer;
+import annotations.Manual;
 import io.qameta.allure.*;
 import models.TestUsers;
 import org.junit.jupiter.api.*;
@@ -10,8 +12,9 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Auth тесты")
-@Owner("dtrofimov")
+@Layer("web")
 @Tag("web")
+@Owner("dtrofimov")
 public class VKLoginTests extends TestBase {
 
     static VKPage vkPage = new VKPage();
@@ -52,6 +55,17 @@ public class VKLoginTests extends TestBase {
         vkPage
                 .rightMenuNavigateTo("Моя страница", user.getUsername())
                 .checkUserName(user.getUsername());
+    }
+
+    @Test
+    @Manual
+    @DisplayName("Разлогин")
+    @Feature("Авторизация ВКонтакте")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Авторизация")
+    void checkSignOut() {
+        step("Залогиниться");
+        step("Разлогиниться");
     }
 
 }

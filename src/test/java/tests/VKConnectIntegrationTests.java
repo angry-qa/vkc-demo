@@ -1,5 +1,6 @@
 package tests;
 
+import annotations.Layer;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
@@ -18,8 +19,9 @@ import testdata.ServiceData;
 import java.util.stream.Stream;
 
 @DisplayName("I&T тесты VKConnect")
-@Owner("dtrofimov")
+@Layer("web")
 @Tags({@Tag("web"), @Tag("integrations")})
+@Owner("dtrofimov")
 public class VKConnectIntegrationTests extends TestBase {
 
     static IntegrationPage integrationPage = new IntegrationPage();

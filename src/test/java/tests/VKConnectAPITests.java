@@ -1,5 +1,6 @@
 package tests;
 
+import annotations.Layer;
 import apisteps.APISteps;
 import config.OwnerConfig;
 import io.qameta.allure.Owner;
@@ -14,8 +15,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("API тесты VKConnect")
-@Owner("dtrofimov")
+@Layer("api")
 @Tags({@Tag("api"), @Tag("smoke"), @Tag("regress")})
+@Owner("dtrofimov")
 public class VKConnectAPITests {
 
     APISteps apiSteps = new APISteps();
