@@ -50,7 +50,7 @@ gradle clean test -Ddriver=remote
 ```
 ### Через CI
 Файл credential.properties в Jenkins можно создать через Create/Update Text File.
-Кроме того, нужно определить парамтеры MAXIMIZED и BASE_HOST.
+Кроме того, нужно определить парамтеры MAXIMIZED, BASE_HOST, BROWSER, BROWSER_VERSION, VIDEO_STRORAGE.
 ```
 clean
 test
