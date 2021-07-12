@@ -38,10 +38,11 @@ public class TestBase {
         Configuration.startMaximized = ownerConfig.isMaximized();
 
         if(ownerConfig.isRemote()) {
-            Configuration.remote = String.format("https://%s:%s@%s/wd/hub/",
-                    credentialConfig.remoteWebUser(),
-                    credentialConfig.remoteWebPassword(),
-                    credentialConfig.getSelenoidURL());
+//        Configuration.remote = String.format("https://%s:%s@%s/wd/hub/",
+//                credentialConfig.remoteWebUser(),
+//                credentialConfig.remoteWebPassword(),
+//                credentialConfig.getSelenoidURL());
+            Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
     }
 
         open(LOGIN_PAGE_URL);
