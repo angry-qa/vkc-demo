@@ -11,12 +11,15 @@
   * ✅ валидация телефонного номера
 
 ## Технологический стек
+Java, Gradle, JUnit5, IntelliJ IDEA, Selenide, Project Lombok, Rest-Assured, Jenkins, Selenoid, Allure TestOps, Jira, Github, Telegram
+
 <a href="https://github.com/angry-qa/vkc-demo">
   <img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40" height="40"  alt="Java"/>
   <img src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" width="40" height="40"  alt="Gradle"/>
   <img src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/>
   <img src="https://starchenkov.pro/qa-guru/img/skills/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/>
   <img src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" width="40" height="40"  alt="Seleide"/>
+  <img src="https://raw.githubusercontent.com/angry-qa/angry-qa/main/lombok.png" width="40" height="40"  alt="Project Lombok"/>
   <img src="https://starchenkov.pro/qa-guru/img/skills/Rest-Assured.svg" width="40" height="40"  alt="ResrAssured"/>
   <img src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40" height="40"  alt="Jenkins"/>
   <img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
@@ -25,3 +28,4 @@
   <img src="https://starchenkov.pro/qa-guru/img/skills/Github.svg" width="40" height="40"  alt="Github"/>
   <img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40" height="40"  alt="Telegram"/>
 </a>
+
