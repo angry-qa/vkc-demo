@@ -74,6 +74,9 @@ test
 ## Отчёт о прохождении автотестов в Allure Report
 <img src="https://raw.githubusercontent.com/angry-qa/vkc-demo/master/src/test/resources/files/allure-report.png" alt="Allure Report"/>
 
+## Список автотестов в Allure Report
+<img src="https://raw.githubusercontent.com/angry-qa/vkc-demo/master/src/test/resources/files/allure-report-tests.png" alt="Allure Report Tests"/>
+
 ## Хранение тестовой документации в Allure TestOps
 Тесткейсы
 
