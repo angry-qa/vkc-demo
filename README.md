@@ -62,7 +62,7 @@ test
 -Dvideo.storage=${VIDEO_STRORAGE}
 ```
 ## Видео о прохождении тестов
-
+<img src="https://raw.githubusercontent.com/angry-qa/vkc-demo/master/src/test/resources/files/selenoid.gif" alt="video test"/>
 
 ## Запуск в Jenkins
 Статистика по запускам
