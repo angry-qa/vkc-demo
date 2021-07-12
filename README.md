@@ -29,8 +29,11 @@ Java, Gradle, JUnit5, IntelliJ IDEA, Selenide, Project Lombok, Rest-Assured, Jen
   <img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40" height="40"  alt="Telegram"/>
 </a>
 
-## Команда для запуска
-Перед запуском необходимо определить параметры в local.properies и credential.properties
+## Как запустить
+### Локально
+Перед выполением необходимо: 
+* в local.properies определить параметры конфигурации
+* в credential.properties указать логин и пароль от ВКонтакте (без 2fa)
 
 ```
 gradle clean test
@@ -38,4 +41,12 @@ gradle clean test
 Для запуска в несколько потоков
 ```
 gradle clean test -Dthreads=5
+```
+### Удаленно
+Перед выполением необходимо: 
+* в local.properies определить параметры конфигурации
+* в credential.properties указать логин и пароль от ВКонтакте (без 2fa), а так же адрес и учтеные данные Selenoid
+
+```
+gradle clean test -Ddriver=remote 
 ```
