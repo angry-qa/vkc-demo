@@ -29,3 +29,13 @@ Java, Gradle, JUnit5, IntelliJ IDEA, Selenide, Project Lombok, Rest-Assured, Jen
   <img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40" height="40"  alt="Telegram"/>
 </a>
 
+## Команда для запуска
+Перед запуском необходимо определить параметры в local.properies и credential.properties
+
+```
+gradle clean test
+```
+Для запуска в несколько потоков
+```
+gradle clean test -Dthreads=5
+```
