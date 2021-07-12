@@ -2,9 +2,7 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({
-        "file:/Users/dm.trofimov/credential.properties",
-        "classpath:credential.properties"})
+@Config.Sources({"classpath:credential.properties"})
 public interface CredentialConfig extends Config {
 
     @Key("selenoid.domain")
