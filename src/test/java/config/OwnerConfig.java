@@ -21,7 +21,7 @@ public interface OwnerConfig extends Config {
     @Key("web.maximized")
     boolean isMaximized();
 
-    @DefaultValue("false")
+    @DefaultValue("true")
     @Key("webdriver.remote")
     boolean isRemote();
 
