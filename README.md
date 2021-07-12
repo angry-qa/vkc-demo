@@ -52,22 +52,27 @@ gradle clean test -Ddriver=remote
 Файл credential.properties в Jenkins можно создать через Create/Update Text File.
 Кроме того, нужно определить парамтеры MAXIMIZED и BASE_HOST.
 ```
-gradle clean test
+clean
+test
 -Ddriver=remote
 -Dweb.maximized=${MAXIMIZED}
 -Dbase.host=${BASE_HOST}
+-Dbrowser.name=${BROWSER}
+-Dbrowser.version=${BROWSER_VERSION}
+-Dvideo.storage=${VIDEO_STRORAGE}
 ```
 ## Видео о прохождении тестов
 
 
 ## Запуск в Jenkins
 Статистика по запускам
+<img src="https://raw.githubusercontent.com/angry-qa/vkc-demo/master/src/test/resources/files/jenkins-dashboard.png" alt="Статистика по запускам"/>
 
 Параметры запуска
-
+<img src="https://raw.githubusercontent.com/angry-qa/vkc-demo/master/src/test/resources/files/jenkins-build.png" alt="Параметры запуска"/>
 
 ## Отчёт о прохождении автотестов в Allure Report
-
+<img src="https://raw.githubusercontent.com/angry-qa/vkc-demo/master/src/test/resources/files/allure-report.png" alt="Allure Report"/>
 
 ## Хранение тестовой документации в Allure TestOps
 Тесткейсы
