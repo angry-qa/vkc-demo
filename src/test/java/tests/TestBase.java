@@ -34,17 +34,14 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.browser = ownerConfig.getWebDriverBrowser();
-        // Configuration.browserVersion = ownerConfig.getWebDriverBrowserVersion();
+        Configuration.browserVersion = ownerConfig.getWebDriverBrowserVersion();
         Configuration.startMaximized = ownerConfig.isMaximized();
 
         if(ownerConfig.isRemote()) {
-//            //Configuration.remote = String.format("https://%s:%s@%s/wd/hub/",
-//            Configuration.remote = String.format("https://%s:%s@%s:4444/wd/hub/",
-//                    credentialConfig.remoteWebUser(),
-//                    credentialConfig.remoteWebPassword(),
-//                    credentialConfig.getSelenoidURL());
-            Configuration.remote = "http://46.101.118.177:4444/wd/hub/";
-
+            Configuration.remote = String.format("https://%s:%s@%s/wd/hub/",
+                    credentialConfig.remoteWebUser(),
+                    credentialConfig.remoteWebPassword(),
+                    credentialConfig.getSelenoidURL());
     }
 
         open(LOGIN_PAGE_URL);
