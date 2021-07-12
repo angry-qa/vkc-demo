@@ -30,11 +30,13 @@ Java, Gradle, JUnit5, IntelliJ IDEA, Selenide, Project Lombok, Rest-Assured, Jen
 </a>
 
 ## Как запустить
-### Локально
 Перед выполением необходимо: 
-* в local.properies определить параметры конфигурации
+* в local.properies определить параметры конфигурации (для запуска тестов локально)
+* в remote.properies определить параметры конфигурации (для запуска тестов удаленно)
 * в credential.properties указать логин и пароль от ВКонтакте (без 2fa)
+* в credential.properties указать адрес и учетные данные Selenoid (для запуска тестов удаленно или на CI)
 
+### Локально
 ```
 gradle clean test
 ```
@@ -43,10 +45,15 @@ gradle clean test
 gradle clean test -Dthreads=5
 ```
 ### Удаленно
-Перед выполением необходимо: 
-* в local.properies определить параметры конфигурации
-* в credential.properties указать логин и пароль от ВКонтакте (без 2fa), а так же адрес и учтеные данные Selenoid
-
 ```
 gradle clean test -Ddriver=remote 
+```
+### Через CI
+Файл credential.properties в Jenkins можно создать через Create/Update Text File.
+Кроме того, нужно определить парамтеры MAXIMIZED и BASE_HOST.
+```
+gradle clean test
+-Ddriver=remote
+-Dweb.maximized=${MAXIMIZED}
+-Dbase.host=${BASE_HOST}
 ```
