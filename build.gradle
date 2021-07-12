@@ -40,6 +40,11 @@ dependencies {
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
 
+tasks.withType(Test) {
+    systemProperties += System.properties
+    System.setProperty("chromeoptions.prefs", "intl.accept_languages=ru")
+}
+
 test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
