@@ -82,3 +82,4 @@ test
 ## Интерграция с Jira
 
 ## Уведомления о прохождении автотестов в Telegram
+<img src="https://raw.githubusercontent.com/angry-qa/vkc-demo/master/src/test/resources/files/telegram-bot.png" alt="Telegram Bot"/>
