@@ -22,4 +22,10 @@ public interface CredentialConfig extends Config {
     @Key("vk.user.password")
     String vkUserPassword();
 
+    @Key("vk.user.token")
+    String vkUserToken();
+
+    @Key("vk.client.id")
+    String vkClientId();
+
 }
