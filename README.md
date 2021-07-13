@@ -79,6 +79,7 @@ test
 
 ## Хранение тестовой документации в Allure TestOps
 Тесткейсы
+<img src="https://raw.githubusercontent.com/angry-qa/vkc-demo/master/src/test/resources/files/allure-testops.png" alt="Allure TestOps TestCases"/>
 
 Дашборд
 
