@@ -33,7 +33,8 @@ Java, Gradle, JUnit5, IntelliJ IDEA, Selenide, Project Lombok, Rest-Assured, Jen
 Перед выполением необходимо: 
 * в local.properies определить параметры конфигурации (для запуска тестов локально)
 * в remote.properies определить параметры конфигурации (для запуска тестов удаленно)
-* в credential.properties указать логин и пароль от ВКонтакте (без 2fa)
+* в credential.properties для UI тестов указать логин и пароль от ВКонтакте (без 2fa)
+* в credential.properties для API тестов указать client_id приложения и токен пользователя ВКонтакте
 * в credential.properties указать адрес и учетные данные Selenoid (для запуска тестов удаленно или на CI)
 
 ### Локально
