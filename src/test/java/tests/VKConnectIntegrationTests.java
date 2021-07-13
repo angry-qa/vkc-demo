@@ -38,7 +38,7 @@ public class VKConnectIntegrationTests extends TestBase {
     @Feature("Интеграции VKConnect")
     @Severity(SeverityLevel.NORMAL)
     public void checkConnect(Service service) {
-        Allure.parameter("Сервис", service);
+        Allure.parameter("Сервис", service.getUrl());
         integrationPage
                 .openIntegrationServicePage(service.getUrl())
                 .clickVKCButton(service.getXpath());
