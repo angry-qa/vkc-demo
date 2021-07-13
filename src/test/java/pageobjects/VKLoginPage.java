@@ -13,7 +13,7 @@ public class VKLoginPage extends TestBase {
     public void loginVK(String login, String pass) {
             $x("//*[@name='email']").shouldBe(Condition.visible).setValue(login);
             $x("//*[@name='pass']").shouldBe(Condition.visible).setValue(pass);
-            $x("//*[@id='mcont']/div[1]/div[2]/div/div/form/div[1]/input").shouldBe(Condition.visible).click();
+            $x("//*[@id='mcont']//input[contains(@class, 'button')]").shouldBe(Condition.visible).click();
             sleep(2000);
     }
 
