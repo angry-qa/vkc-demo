@@ -1,10 +1,7 @@
 package tests;
 
 import annotations.Layer;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import models.Service;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -41,15 +38,16 @@ public class VKConnectIntegrationTests extends TestBase {
     @Feature("Интеграции VKConnect")
     @Severity(SeverityLevel.NORMAL)
     public void checkConnect(Service service) {
-            integrationPage
-                    .openIntegrationServicePage(service.getUrl())
-                    .clickVKCButton(service.getXpath());
+        Allure.parameter("Сервис", service);
+        integrationPage
+                .openIntegrationServicePage(service.getUrl())
+                .clickVKCButton(service.getXpath());
 
-            connectPage
-                    .switchPage(1)
-                    .chekQuickAuth()
-                    .closePage()
-                    .switchPage(0);
+        connectPage
+                .switchPage(1)
+                .chekQuickAuth()
+                .closePage()
+                .switchPage(0);
     }
 
 }
