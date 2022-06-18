@@ -41,11 +41,7 @@ dependencies {
 }
 
 tasks.withType(Test) {
-    systemProperties += System.properties
-    System.setProperty("chromeoptions.prefs", "intl.accept_languages=ru")
-}
-
-test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
+    System.setProperty("chromeoptions.prefs", "intl.accept_languages=ru")
 }
